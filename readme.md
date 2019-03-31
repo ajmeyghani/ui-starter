@@ -1,3 +1,15 @@
-# My Webpack Boilerplate
+# UI Starter
 
-Hopefully this will be my last boilerplate for 2019 ... .
+A minimal starter kit for making UIs.
+
+### Table of Contents
+
+- [Getting Started](./docs/start.md)
+
+- [Workflow](./docs/workflow.md)
+
+- [Testing](./docs/testing.md)
+
+- [Building](./docs/building.md)
+
+- [List of Tasks](./docs/tasks.md)
