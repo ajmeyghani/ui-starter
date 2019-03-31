@@ -1,0 +1,8 @@
+{
+  "name": "aj-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "AJ Meyghani",
+  "license": "MIT",
+  "private": false
+}
