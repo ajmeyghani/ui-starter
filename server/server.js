@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const favicon = require('express-favicon');
+const favicon = require("express-favicon");
 const app = express();
 const clientRoot = path.join(__dirname, "/../dist/public");
 app.use(favicon(path.join(clientRoot, "favicon.png")));
