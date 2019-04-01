@@ -7,11 +7,12 @@
   "private": false,
   "scripts": {
     "start": "",
+    "dev:server": "nodemon server/server -w server/**/*.js",
     "test": "jest --config config/jest.config.js  --no-cache",
     "dev:test": "jest --config config/jest.config.js  --no-cache --watch",
     "tdd": "yarn dev:test",
     "test:cover": "yarn test --coverage",
-    "lint": "eslint -c config/.eslintrc.js config __mocks__ src --fix",
+    "lint": "eslint -c config/.eslintrc.js config __mocks__ src server --fix",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "devDependencies": {
@@ -22,10 +23,13 @@
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.12.0",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.5.0",
     "jest-haste-map": "^24.5.0",
     "jest-resolve": "^24.5.0",
+    "nodemon": "^1.18.10",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },
