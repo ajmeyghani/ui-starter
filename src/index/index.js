@@ -1,9 +1,6 @@
-import * as value from "lib/value/vsalue";
+import * as value from "lib/value/value";
 
 const hello = () => "hello";
-
-const isStr = value.isString("hello world");
-
 console.log(value.isNil(void 0), "ok");
 
 export {

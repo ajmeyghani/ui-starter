@@ -1,35 +1,37 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+// const CleanWebpackPlugin = require("clean-webpack-plugin");
 const path = require("path");
-
-// todo: remove this...
-const r = (p) => {
-  const root = path.join(__dirname, '/../');
-  return path.resolve(root, p);
-};
+const root = path.join(__dirname, "/../");
 
 module.exports = {
   mode: "development",
-  stats: 'errors-only',
+  stats: "errors-only",
   devtool: "source-map",
   entry: {
-    index: r("src/index/index.js")
+    index: path.resolve(root, "src/index/index.js"),
   },
   output: {
-    path: r("dist/public"),
+    path: path.resolve(root, "dist/public"),
     publicPath: "/",
     filename: "[name].bundle.js",
   },
   resolve: {
-    modules: [r("src"), r("node_modules")],
+    extensions: ["*", ".js", ".jsx", ".json"],
+    modules: [
+      path.resolve(root, "src"),
+      path.resolve(root, "node_modules"),
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: r("src/index/index.html"),
+      template: path.resolve(root, "src/index/index.html"),
     }),
     new CopyPlugin([
-      { from: r('src/index/favicon.png'), to: r("dist/public/") },
+      {
+        from: path.resolve(root, "src/index/favicon.png"),
+        to: path.resolve(root, "dist/public/"),
+      },
     ]),
     // new CleanWebpackPlugin(),
   ],

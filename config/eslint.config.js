@@ -28,7 +28,7 @@ module.exports = {
       "ObjectExpression": 1,
       "ImportDeclaration": 1,
       "flatTernaryExpressions": false,
-      ignoredNodes: [
+      "ignoredNodes": [
         "JSXElement",
         "JSXElement > *",
         "JSXAttribute",
