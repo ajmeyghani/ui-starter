@@ -1,5 +1,10 @@
 module.exports = {
-  "extends": ["google"],
+  "extends": ["google", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",

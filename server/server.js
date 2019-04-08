@@ -5,7 +5,6 @@ const app = express();
 const clientRoot = path.join(__dirname, "/../dist/public");
 app.use(favicon(path.join(clientRoot, "favicon.png")));
 
-
 /* Root path. */
 app.use("/", express.static(clientRoot));
 
