@@ -13,5 +13,5 @@ module.exports = merge(common, {
       template: path.resolve(root, "src/index/index.prod.html"),
       hash: true,
     }),
-  ]
+  ],
 });

@@ -1,9 +1,10 @@
-import * as value from "lib/value/value";
 import React from "react";
 import ReactDom from "react-dom";
+import App from "app/app";
+import Toaster from "aj-toaster";
+// import Toaster from "aj-toaster/src/toaster/toaster";
 
-const getVal = () => value.isNil("1");
-
-const App = () => (<div>app ...</div>);
-
-ReactDom.render(<App />, document.querySelector("#app"));
+ReactDom.render(
+<Toaster>
+  <App />
+</Toaster>, document.querySelector("#app"));
