@@ -1,8 +1,9 @@
 import * as value from "lib/value/value";
+import React from "react";
+import ReactDom from "react-dom";
 
-const hello = () => "hello";
-console.log(value.isNil(void 0), "ok");
+const getVal = () => value.isNil("1");
 
-export {
-  hello,
-};
+const App = () => (<div>app ...</div>);
+
+ReactDom.render(<App />, document.querySelector("#app"));
