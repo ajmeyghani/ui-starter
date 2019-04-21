@@ -1095,10 +1095,10 @@ acorn@^6.0.1, acorn@^6.0.5, acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-aj-toaster@~0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/aj-toaster/-/aj-toaster-0.3.1.tgz#7aaa1eef5583ac2784bc2f392e58a579b1703d23"
-  integrity sha512-hOEkbfmJo+6QcKgkoH+lwkUKV7kJX0R9eNl5rQm/l4EXVK4F/1A5Y5raQMxCfhaHk6hy3eYPQJNT9K4KYj6Ltw==
+aj-toaster@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/aj-toaster/-/aj-toaster-1.0.0.tgz#a2d0d4c94bf87f97da4dbdd1bb930103e8abf625"
+  integrity sha512-BbiuRe07oY0QKjlDx6BVYTywQzmIDSNIBJoiS344+BCl5kubDuysrsac4NcHzpPjyQeMRiQwDnhaEcp4rm5f2g==
 
 ajv-errors@^1.0.0:
   version "1.0.1"

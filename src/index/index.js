@@ -4,6 +4,6 @@ import App from "app/app";
 import Toaster from "aj-toaster";
 
 ReactDOM.render(
-<Toaster>
+<Toaster theme="mytheme">
   <App />
 </Toaster>, document.querySelector("#app"));

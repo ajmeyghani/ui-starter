@@ -46,7 +46,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "aj-toaster": "~0.3.0",
+    "aj-toaster": "^1.0.0",
     "axios": "^0.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
