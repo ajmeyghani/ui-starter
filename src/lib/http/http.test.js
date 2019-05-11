@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as rest from "./rest";
+import {httpClient} from "./http";
 jest.mock("axios");
 axios.create.mockImplementation(() => "boo");
 
@@ -9,23 +9,23 @@ describe("newClient should:", () => {
   });
 
   it("be defined", () => {
-    expect(rest.newClient).toBeDefined();
+    expect(httpClient).toBeDefined();
   });
 
   it("throw if no config given", () => {
     expect(() => {
-      rest.newClient();
+      httpClient();
     }).toThrow();
   });
 
   it("throw if no baseURL given", () => {
     expect(() => {
-      rest.newClient({});
+      httpClient({});
     }).toThrow();
   });
 
   it("call axios.create with the given config.", () => {
-    rest.newClient({
+    httpClient({
       baseURL: "blah",
     });
     expect(axios.create).toHaveBeenCalledWith({
@@ -34,7 +34,7 @@ describe("newClient should:", () => {
   });
 
   it("return an instance defined.", () => {
-    const client = rest.newClient({
+    const client = httpClient({
       baseURL: "blah",
     });
     expect(client).toBeDefined();

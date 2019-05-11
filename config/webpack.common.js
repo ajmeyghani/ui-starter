@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const root = path.join(__dirname, "/../");
 
@@ -26,7 +25,7 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        // exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
@@ -34,17 +33,33 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
     ],
   },
   externals: {
-    "react": 'React',
-    "react-dom": 'ReactDOM',
+    "react": "React",
+    "react-dom": "ReactDOM",
+    "react-router-dom": "ReactRouterDOM",
   },
   plugins: [
     new CopyPlugin([
       {
         from: path.resolve(root, "src/index/favicon.png"),
         to: path.resolve(root, "dist/public/"),
+      },
+      {
+        from: path.resolve(root, "src/assets/images/"),
+        to: path.resolve(root, "dist/public/images"),
+      },
+      {
+        from: path.resolve(root, "src/assets/css/"),
+        to: path.resolve(root, "dist/public/css"),
       },
     ]),
   ],
