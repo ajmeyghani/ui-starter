@@ -14,7 +14,7 @@
     "dev:test": "jest --config config/jest.config.js  --no-cache --watch",
     "tdd": "yarn dev:test",
     "test:cover": "yarn test --coverage",
-    "lint": "eslint -c config/eslint.config.js config __mocks__ src server --fix",
+    "lint": "eslint config __mocks__ src server --fix",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.12.0",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.13.0",
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
@@ -39,6 +39,7 @@
     "jest-resolve": "^24.5.0",
     "nodemon": "^1.18.10",
     "npm-run-all": "^4.1.5",
+    "prettier": "1.17.0",
     "rimraf": "^2.6.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
@@ -51,6 +52,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
+    "react-select": "^2.4.3",
     "react-transition-group": "^2.9.0"
   }
 }

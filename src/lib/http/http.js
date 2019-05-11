@@ -1,7 +1,7 @@
 import axios from "axios";
 import {isNil} from "lib/value/value";
 
-const newClient = (config) => {
+const httpClient = (config) => {
   if (isNil(config)) {
     throw new Error("need config");
   }
@@ -16,5 +16,5 @@ const newClient = (config) => {
 };
 
 export {
-  newClient,
+  httpClient,
 };

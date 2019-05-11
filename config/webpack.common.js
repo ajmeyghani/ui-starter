@@ -53,6 +53,14 @@ module.exports = {
         from: path.resolve(root, "src/index/favicon.png"),
         to: path.resolve(root, "dist/public/"),
       },
+      {
+        from: path.resolve(root, "src/assets/images/"),
+        to: path.resolve(root, "dist/public/images"),
+      },
+      {
+        from: path.resolve(root, "src/assets/css/"),
+        to: path.resolve(root, "dist/public/css"),
+      },
     ]),
   ],
 };
