@@ -16,10 +16,7 @@ module.exports = {
   },
   resolve: {
     extensions: ["*", ".js", ".jsx", ".json"],
-    modules: [
-      path.resolve(root, "src"),
-      path.resolve(root, "node_modules"),
-    ],
+    modules: [path.resolve(root, "src"), path.resolve(root, "node_modules")],
   },
   module: {
     rules: [
@@ -35,11 +32,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   externals: {

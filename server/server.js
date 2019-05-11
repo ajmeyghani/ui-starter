@@ -1,12 +1,14 @@
 const path = require("path");
 const express = require("express");
-const favicon = require("express-favicon");
 const app = express();
 const clientRoot = path.join(__dirname, "/../dist/public");
 
 /* Root path. */
 app.use("/", express.static(clientRoot));
-app.use("/node_modules", express.static(path.join(__dirname, "/../node_modules")));
+app.use(
+  "/node_modules",
+  express.static(path.join(__dirname, "/../node_modules"))
+);
 
 /* some endpoint */
 app.get("/api/posts/1", (request, response) => {

@@ -31,4 +31,3 @@ describe("`isString` should:", () => {
     expect(value.isString({})).toBe(false);
   });
 });
-

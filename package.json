@@ -15,7 +15,9 @@
     "tdd": "yarn dev:test",
     "test:cover": "yarn test --coverage",
     "lint": "eslint config __mocks__ src server --fix",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "pretty": "prettier  --write \"{src,__mocks__,config,server}/**/*.js\"",
+    "pl": "yarn pretty && yarn lint"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -31,7 +33,6 @@
     "eslint-config-google": "^0.12.0",
     "eslint-plugin-react": "^7.13.0",
     "express": "^4.16.4",
-    "express-favicon": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.5.0",
@@ -47,12 +48,9 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "aj-toaster": "^1.0.0",
     "axios": "^0.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-select": "^2.4.3",
-    "react-transition-group": "^2.9.0"
+    "react-router-dom": "^5.0.0"
   }
 }
